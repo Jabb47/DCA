@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import MetaDataListView
+from .views import DBMetaDataListView , DataClassifyView
 
 urlpatterns = [
-    path('',MetaDataListView.as_view())
+    path('',DBMetaDataListView.as_view()),
+    path('classify/', DataClassifyView.as_view())
 ]

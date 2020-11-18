@@ -72,7 +72,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME':'MetaDataStoreDB',
-        "HOST": 'mongodb+srv://JabbzMotlhale:Password47@dataclassificationappdb.6ntg9.mongodb.net/<dbname>?retryWrites=true&w=majority',
+        "HOST": 'mongodb+srv://JabbzMotlhale:Password47@dataclassificationappdb.6ntg9.mongodb.net/MetaDataStoreDB?retryWrites=true&w=majority',
         "USERNAME": 'JabbzMotlhale',
         "PASSWORD": 'Password47',
     }
