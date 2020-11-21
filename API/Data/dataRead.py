@@ -1,7 +1,7 @@
 
 
 def read_excell(data_file):
-    return {"msg" : 'Hello world'}
+    return {"file" : data_file}
 
 def read_db(data_file):
     return {"msg" : 'Hello world'}

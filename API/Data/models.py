@@ -1,19 +1,13 @@
 from django.db import models
+from django.contrib.auth import get_user_model
+User = get_user_model()
+
+
+def upload_path(instance , fileName):
+    return '/'.join(['datafiles',fileName])
 
 # Create your models here.
-class DBMetaData(models.Model):
-    dataBaseName = models.CharField(max_length=255, blank=True ,default="")
-    data_store_type =  models.CharField(max_length=255, blank=True, default="")
-    storage_location = models.URLField(max_length=200,default="")
-    database_table   = models.CharField(max_length=255, blank=True, default="")
-    field_name  = models.CharField(max_length=255, blank=True, default="")
-    category   = models.CharField(max_length=255, blank=True, default="")
 
+class DataFile(models.Model):
+    file_data =  models.FileField(upload_to=upload_path)
 
-class SpreadSheetMetaData(models.Model):
-    spreadSheetName = models.CharField(max_length=255, blank=True ,default="")
-    data_store_type =  models.CharField(max_length=255, blank=True, default="")
-    file_location = models.URLField(max_length=200,default="")
-    tab_name   = models.CharField(max_length=255, blank=True, default="")
-    column_name  = models.CharField(max_length=255, blank=True, default="")
-    category   = models.CharField(max_length=255, blank=True, default="")

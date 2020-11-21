@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import DBMetaData
+from .models import DataFile
 # Register your models here.
-admin.site.register(DBMetaData)
+admin.site.register(DataFile)

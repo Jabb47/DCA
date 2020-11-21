@@ -1,12 +1,8 @@
 from rest_framework import serializers
-from .models import DBMetaData, SpreadSheetMetaData
+from .models import  DataFile
 
-class DBMetaDataSerializer(serializers.ModelSerializer):
+class DataFileSerializer(serializers.ModelSerializer):
     class Meta:
-        model = DBMetaData
+        model: DataFile
         fields = '__all__'
 
-class SpreadSheetMDSerializer(serializers.ModelSerializer):
-    class Meta:
-        model: SpreadSheetMetaData
-        fields = '__all__'

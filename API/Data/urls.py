@@ -1,7 +1,9 @@
-from django.urls import path
-from .views import DBMetaDataListView , DataClassifyView
+from django.urls import path , include
+from rest_framework import routers
+from .views import DataClassifyView
+
 
 urlpatterns = [
-    path('',DBMetaDataListView.as_view()),
-    path('classify/', DataClassifyView.as_view())
+    path('classify/', DataClassifyView.as_view()),
+    
 ]
